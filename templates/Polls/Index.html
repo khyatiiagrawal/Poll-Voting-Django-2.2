@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="="en>
+<head>
+	<meta charset="UTF-8">
+	<title>Poll</title>
+</head>
+<body>
+	<h1>Welcome to Polls!</h1>
+	<br>
+	<h3>Click on a question to vote:</h3>
+
+	{% for q in qst%}
+		<a href = "{% url 'showchoices' q.id %} ">{{ q.question_text }}</a>
+
+	{% endfor%}
+
+</body>
+
+</html>
